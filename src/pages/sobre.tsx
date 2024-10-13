@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/header.css';
 import '../css/doador.css';
+
 import doador from '../img/images.png';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
@@ -12,23 +13,22 @@ const Sobre: React.FC = () => {
                 <nav id="navbar">
                     <i id="nav_logo">🩸Blood Bond</i>
                     <ul id="nav_list">
-              <li className="nav-item active">
-                <a href="/">Início</a>
-              </li>
-              <li className="nav-item">
-                <Link to="/LogHemo">Sou Hemonúcleo</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/sobre">Sobre</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/notificaçao">Notificação</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/DoadorLog">Doador</Link>
-              </li>
-            </ul>
-
+                        <li className="nav-item active">
+                            <a href="/">Início</a>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/LogHemo">Sou Hemonúcleo</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/sobre">Sobre</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/notificaçao">Notificação</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/DoadorLog">Doador</Link>
+                        </li>
+                    </ul>
                     <button id="mobile_btn">
                         <i className="fa-solid fa-bars"></i>
                     </button>
@@ -53,42 +53,41 @@ const Sobre: React.FC = () => {
                 </div>
             </header>
 
-            <h1 id="reqheader">Requisitos básicos da doação</h1>
-            <div className="container">
-                <section id="reqmae">
-                    <div id="reqtext">
-                        <article id="img">
-                            <img src={doador} alt="Requisitos para Doação" />
-                        </article>
-                        <ul>
-                            <li>
-                                Ter idade entre 16 e 69 anos (menores de 18 anos devem apresentar consentimento formal do responsável legal).
-                            </li>
-                            <br />
-                            <li>
-                                Pessoas com idade entre 60 e 69 anos só poderão doar sangue se já o tiverem feito antes dos 60 anos.
-                            </li>
-                            <br />
-                            <li>
-                                Apresentar documento de identificação com foto emitido por órgão oficial (Carteira de Identidade, Carteira Nacional de Habilitação,
-                                Carteira de Trabalho, Passaporte, Registro Nacional de Estrangeiro, Certificado de Reservista e Carteira Profissional emitida por classe).
-                                São aceitos documentos digitais com foto.
-                            </li>
-                            <br />
-                            <li>Pesar no mínimo 50 kg.</li>
-                            <br />
-                            <li>Ter dormido pelo menos 6 horas nas últimas 24 horas.</li>
-                            <br />
-                            <li>
-                                Estar alimentado. Evitar alimentos gordurosos nas 3 horas que antecedem a doação de sangue. Caso seja após o almoço, aguardar 2 horas.
-                            </li>
-                        </ul>
-                    </div>
+            <main className="content">
+                <section className="intro">
+                    <h1>Por que Doar Sangue?</h1>
+                    <p>Cada doação pode salvar até quatro vidas. Ao doar, você se torna um herói em potencial, ajudando a manter os estoques de sangue nas unidades de saúde sempre prontos para emergências.</p>
                 </section>
-            </div>
+<img src={doador} alt="Doador de Sangue" className="donor-image" />
+                <section className="benefits">
+                    <h2>Benefícios de Ser Doador</h2>
+                    <ul>
+                        <li>Contribuir para salvar vidas.</li>
+                        <li>Aumentar a sua saúde: a doação regular pode ajudar a reduzir o risco de algumas doenças.</li>
+                        <li>Um check-up de saúde gratuito: exames são realizados antes de cada doação.</li>
+                        <li>Um sentimento de realização e comunidade.</li>
+                    </ul>
+                </section>
 
-            {/* Espaço extra antes do footer */}
-            <div style={{ height: '40px' }} />
+                <section className="how-to-donate">
+                    <h2>Como Doar?</h2>
+                    <div className="donation-steps">
+                        <div className="step">
+                            <h3>1. Verifique os Requisitos</h3>
+                            <p>Ter entre 16 e 69 anos, pesar mais de 50 kg e estar em boas condições de saúde.</p>
+                        </div>
+                        <div className="step">
+                            <h3>2. Agende sua Doação</h3>
+                            <p>Entre em contato com o hemocentro mais próximo e agende sua visita.</p>
+                        </div>
+                        <div className="step">
+                            <h3>3. Faça a Doação</h3>
+                            <p>O processo é rápido, seguro e feito por profissionais qualificados.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </main>
 
             <footer className="footer">
                 <div className="footer-content">
@@ -124,7 +123,6 @@ const Sobre: React.FC = () => {
                             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram />
                             </a>
-                           
                         </div>
                     </div>
                 </div>
@@ -137,4 +135,3 @@ const Sobre: React.FC = () => {
 };
 
 export default Sobre;
- 
