@@ -1,74 +1,57 @@
 import { Link } from "react-router-dom";
-import { useState } from "react"; // Não esqueça de importar useState
 import '../css/doador.css'; // Verifique o caminho do CSS
 import estoque from '../img/estoque de sangue.png';
 
-const Header = () => {
-    const [isMobileMenuActive, setMobileMenuActive] = useState(false);
 
-    const toggleMobileMenu = () => {
-        setMobileMenuActive(!isMobileMenuActive);
-    };
-
-    return (
-        <header>
-            <nav id="navbar">
-                <i id="nav_logo">🩸Blood Bond</i>
-
-                <ul id="nav_list">
-                    <li className="nav-item active">
-                        <Link to="/App">Início</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/LogHemo">Sou Hemonúcleo</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/sobre">Sobre</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/notificacao">Notificação</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/DoadorLog">Doador</Link>
-                    </li>
-                </ul>
-
-                <button id="mobile_btn" onClick={toggleMobileMenu}>
-                    <i className="fa-solid fa-bars"></i>
-                </button>
-            </nav>
-
-            <div id={`mobile_menu ${isMobileMenuActive ? 'active' : ''}`}>
-                <ul id="mobile_nav_list">
-                    <li className="nav-item">
-                        <Link to="/App">Início</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/LogHemo">Sou Hemonúcleo</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/sobre">Sobre</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/notificacao">Notificação</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/DoadorLog">Doador</Link>
-                    </li>
-                </ul>
-
-                <button className="btn-default">
-                    Seja doador
-                </button>
-            </div>
-        </header>
-    );
-};
 
 const Doadorest = () => {
     return (
         <>
-            <Header />
+            <header>
+                <nav id="navbar">
+                    <i id="nav_logo">🩸Blood Bond</i>
+                    <ul id="nav_list">
+              <li className="nav-item active">
+                <a href="/">Início</a>
+              </li>
+              <li className="nav-item">
+                <Link to="/LogHemo">Sou Hemonúcleo</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/sobre">Sobre</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/notificaçao">Notificação</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/DoadorLog">Doador</Link>
+              </li>
+            </ul>
+
+                    <button id="mobile_btn">
+                        <i className="fa-solid fa-bars"></i>
+                    </button>
+                </nav>
+
+                <div id="mobile_menu">
+                    <ul id="mobile_nav_list">
+                        <li className="nav-item">
+                            <Link to="#home">Início</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="#Login">Doador</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="#Login">Sou Hemonúcleo</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="#Login">Notificação</Link>
+                        </li>
+                    </ul>
+                    <button className="btn-default">Seja doador</button>
+                </div>
+            </header>
+
             <div className="doador-body">
                 <div className="info-box">
                     <h1 id="h1not">Por que receber a notificação?</h1>

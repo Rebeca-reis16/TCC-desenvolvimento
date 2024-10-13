@@ -12,22 +12,23 @@ const Sobre: React.FC = () => {
                 <nav id="navbar">
                     <i id="nav_logo">🩸Blood Bond</i>
                     <ul id="nav_list">
-                        <li className="nav-item active">
-                            <a href="/">Início</a>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/LogHemo">Sou Hemonúcleo</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/sobre">Sobre</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/notificacao">Notificação</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/DoadorLog">Doador</Link>
-                        </li>
-                    </ul>
+              <li className="nav-item active">
+                <a href="/">Início</a>
+              </li>
+              <li className="nav-item">
+                <Link to="/LogHemo">Sou Hemonúcleo</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/sobre">Sobre</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/notificaçao">Notificação</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/DoadorLog">Doador</Link>
+              </li>
+            </ul>
+
                     <button id="mobile_btn">
                         <i className="fa-solid fa-bars"></i>
                     </button>

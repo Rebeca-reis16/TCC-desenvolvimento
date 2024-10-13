@@ -3,12 +3,12 @@
   align-items: flex-start; /* Alinhar ao topo */
   justify-content: center; /* Centraliza horizontalmente */
   height: 100vh; /* Ocupa 100% da altura da tela */
-     /* Fundo do wrapper */
   padding-top: 40px; /* Aumenta o espaço no topo */
+  background: linear-gradient(to top, #FFC5C5, #E5E5EA); /* Fundo com gradiente */
 }
 
 .container {
-  background-color: #FFFFFF;
+  background-color: #FFFFFF; /* Cor de fundo do container */
   padding: 30px; /* Mantém o padding interno */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
